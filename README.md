@@ -2,6 +2,7 @@
 
 業務管理＆学習補助システム
 
+＜概要＞
 1.	プロジェクトの背景および目的
 3年間塾講師のアルバイトをした経験をもとに業務量の多い学習塾の業務を効率化したいと考えた。業務軽減だけでなく、学習支援の機能も付け加えて一つのシステムの中で利用できるようにした。
 
@@ -27,6 +28,52 @@
 •	掲示板機能
 •	画像、動画のアップロード機能
 
+6. 開発環境
+•言語：PHP5.2.4
+•データベース：MySQL（PDO）
+
 5.	その他
 •	セキュリティ対策として、パスワードのハッシュ化を行う。
 •	アカウントの種類によってアクセスできる情報を制限する。
+
+＜構成＞
+データベース接続：db.php
+
+会員登録
+　　仮登録：registration_mail_form.php → registration_mail_check.php
+　　本登録：registration_form.php → registration_check.php → registration_insert.php
+  
+ログイン
+　　login_form.php → login_check.php → 4種類のアカウントへ
+  
+ログアウト
+　　logout.php
+  
+アカウントの種類
+    生徒用：login_admin_student.php
+    講師用：login_admin_teacher.php
+    保護者用：login_admin_parent.php
+    責任者用:login_admin_manager.php
+    
+ 責任者専用機能
+  　登録情報の確認：check_registered_information.php
+    アカウント削除：operate_registered_information.php
+    授業コードの設定：code_set.php
+    保護者会の予約状況の確認：check_interview_registration.php
+    
+ 講師専用機能
+ 　　出席・出勤記録：attendence_of_students.php, attendence_of_teachers.php
+     
+ 画像・動画
+ 　　データベースへ格納：media_insert.php
+   　表示：import_media.php
+    
+お知らせ
+     作成：announce.php
+     表示：notification.php
+     削除：delete_notice.php
+     
+掲示板機能
+　　　message.php(read_message.phpは読めるが書き込みはできないもの。)
+   　
+   
