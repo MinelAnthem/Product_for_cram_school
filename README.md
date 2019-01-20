@@ -40,33 +40,30 @@
 データベース接続：db.php
 
 会員登録
-　　仮登録：registration_mail_form.php → registration_mail_check.php
-　　本登録：registration_form.php → registration_check.php → registration_insert.php
+
+    仮登録：registration_mail_form.php → registration_mail_check.php
+    本登録：registration_form.php → registration_check.php → registration_insert.php
   
-ログイン
-　　login_form.php → login_check.php → 4種類のアカウントへ
+ログイン 
+    
+    login_form.php → login_check.php → 4種類のアカウントへ
   
 ログアウト
-　　logout.php
+　
+    logout.php
   
 アカウントの種類
 
     生徒用：login_admin_student.php
-    
     講師用：login_admin_teacher.php
-    
     保護者用：login_admin_parent.php
-    
     責任者用:login_admin_manager.php
     
  責任者専用機能
  
     登録情報の確認：check_registered_information.php
-    
     アカウント削除：operate_registered_information.php
-    
     授業コードの設定：code_set.php
-    
     保護者会の予約状況の確認：check_interview_registration.php
     
     
@@ -77,21 +74,17 @@
 保護者専用機能
      
       カレンダーの表示：calender.php
-      
       日付確認・登録：skedulu_registration.php
      
 画像・動画
 
   　　データベースへ格納：media_insert.php
-    
     　表示：import_media.php
     
 お知らせ
 
      作成：announce.php
-     
      表示：notification.php
-     
      削除：delete_notice.php
      
 掲示板機能
