@@ -50,30 +50,52 @@
 　　logout.php
   
 アカウントの種類
+
     生徒用：login_admin_student.php
+    
     講師用：login_admin_teacher.php
+    
     保護者用：login_admin_parent.php
+    
     責任者用:login_admin_manager.php
     
  責任者専用機能
-  　登録情報の確認：check_registered_information.php
+ 
+    登録情報の確認：check_registered_information.php
+    
     アカウント削除：operate_registered_information.php
+    
     授業コードの設定：code_set.php
+    
     保護者会の予約状況の確認：check_interview_registration.php
     
- 講師専用機能
- 　　出席・出勤記録：attendence_of_students.php, attendence_of_teachers.php
+    
+講師専用機能
      
- 画像・動画
- 　　データベースへ格納：media_insert.php
-   　表示：import_media.php
+     出席・出勤記録：attendence_of_students.php, attendence_of_teachers.php
+
+保護者専用機能
+     
+      カレンダーの表示：calender.php
+      
+      日付確認・登録：skedulu_registration.php
+     
+画像・動画
+
+  　　データベースへ格納：media_insert.php
+    
+    　表示：import_media.php
     
 お知らせ
+
      作成：announce.php
+     
      表示：notification.php
+     
      削除：delete_notice.php
      
 掲示板機能
-　　　message.php(read_message.phpは読めるが書き込みはできないもの。)
-   　
+
+  　　message.php(read_message.phpは読めるが書き込みはできないもの。)
+       　
    
