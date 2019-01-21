@@ -2,12 +2,7 @@
 session_start();
 
 header("Content-type: text/html; charset=utf-8");
-/*不要
-if($_POST['token'] != $_SESSION['token']){
-	echo "不正アクセスの可能性あり";
-	exit();
-}
-*/
+
 //クリックジャッキング対策
 header('X-FRAME-OPTIONS: SAMEORIGIN');
 
