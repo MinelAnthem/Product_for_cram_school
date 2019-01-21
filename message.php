@@ -29,7 +29,7 @@ $statement->execute();
 
 
 if($row = $statement->fetch()){
-	$mycode = $row["code"];  //配列にする必要あるか？
+	$mycode = $row["code"];
 }else{
 	//$errors["code_not_found"] = 
 	echo "授業コードが登録されていません。";
