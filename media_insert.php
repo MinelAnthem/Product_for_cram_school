@@ -18,11 +18,8 @@ try{
 		//エラーチェック
 		switch($_FILES['upfile']['error']){
 			case UPLOAD_ERR_OK:  //異常なし
-			//echo "test";表示OK
 				break;
 			case UPLOAD_ERR_NO_FILE:  //ファイル未選択
-				//echo "test2";表示なし⇒breakできている。
-				//エラーを投げるRuntimeExceptionはExceptionの継承クラス
 				throw new RuntimeException('ファイルが選択されていません',400);
 			case UPLOAD_ERR_INI_SIZE:  //php.ini定義の最大サイズ超過
 				throw new RuntimeException('ファイルサイズが大きすぎます',500);
@@ -32,7 +29,6 @@ try{
 
 		//画像・動画をバイナリデータにする
 		$raw_data = file_get_contents($_FILES['upfile']['tmp_name']);
-		//echo $raw_data; //文字化けでの表示成功
 
 		//拡張子を見る
 		$tmp = pathinfo($_FILES['upfile']['name']);  //すべての情報を配列として取得
