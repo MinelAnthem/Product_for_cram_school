@@ -22,9 +22,6 @@ header('X-FRAME-OPTIONS: SAMEORIGIN');
 <input type = "text" name = "mail" size = "50" placeholder = "メールアドレス">
 <br>
 <input type = "submit" value = "登録する">
-
-<!-- <input type = "hidden" name = "token" value = "<?=$token?>"> -->
-
 </form>
 
 </div>
