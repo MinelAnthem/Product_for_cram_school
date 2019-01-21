@@ -83,7 +83,7 @@ if(isset($_POST["to"]) && isset($_POST["account"]) && isset($_POST["subject"]) &
 		//エラーを投げるように設定
 		$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
-		//投稿した時間も挿入、idも設定予定（時間順に並べるため）
+		//投稿した時間も挿入
 		$sql=$dbh->prepare("INSERT INTO message_box (my_account,your_account,subject,body,code,date) VALUES(:my_account,:your_account,:subject,:body,:code,now() )");
 		$sql->bindValue(':my_account', $account, PDO::PARAM_STR);
 		$sql->bindValue(':your_account', $your_account, PDO::PARAM_STR);
