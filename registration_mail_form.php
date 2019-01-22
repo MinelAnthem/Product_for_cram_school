@@ -22,6 +22,8 @@ header('X-FRAME-OPTIONS: SAMEORIGIN');
 <input type = "text" name = "mail" size = "50" placeholder = "メールアドレス">
 <br>
 <input type = "submit" value = "登録する">
+<br>
+<a href="login_form.php">登録済みの方はこちら</a>
 </form>
 
 </div>
